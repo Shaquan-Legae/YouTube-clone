@@ -9,6 +9,7 @@
         color: #0f0f0f;
         font-family: Arial, sans-serif;
         overflow-y: hidden;
+        overflow-x: hidden;
     }
 
     /* Top Navbar */
@@ -147,6 +148,7 @@
     }
 
     /* Profile */
+
     .profile-image {
         width: 32px;
         height: 32px;
@@ -155,15 +157,14 @@
     }
 
     .profile-image:hover {
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.08);
-        padding: 5px 5px;
         cursor: pointer;
     }
+
 
     /* Left Pane Navigation */
 
     .left-nav {
+        position: fixed;
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -237,23 +238,90 @@
         font-weight: 550;
     }
 
-    .explore button, .you button {
+    .explore button,
+    .you button {
         padding-left: 15px;
         font-size: 14px;
     }
 
     /*Left Pane Nav Footer*/
 
-    .footer a {
+    .nav-footer a {
         text-decoration: none;
         color: rgba(8, 6, 6, 0.719);
     }
 
-    .footer {
+    .nav-footer {
         padding: 15px 5px;
     }
 
-    .footer p {
+    .nav-footer p {
         padding: 15px 0;
         font-size: 12px;
+    }
+
+    .suggestions {
+        display: flex;
+        margin-left: 290px;
+        gap: 12px;
+        padding: 12px 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+        position: sticky;
+        top: 56px;
+        background: white;
+        z-index: 5;
+    }
+
+    .suggestions button {
+        height: 35px;
+        padding: 0 16px;
+        border: none;
+        background: rgb(241, 238, 238);
+        border-radius: 9px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .suggestions button:hover {
+        background: rgba(0, 0, 0, 0.719);
+        transition: 0.3s ease-in-out;
+        color: white;
+    }
+
+    .suggestions::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        margin-left: 290px;
+        gap: 30px;
+        padding: 12px 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        position: sticky;
+        top: 56px;
+        background: white;
+        z-index: 5;
+    }
+
+    .thumbnail {
+        width: 340px;
+        height: 192px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .thumbnail img:first-child {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.2s ease;
+    }
+
+    .thumbnail:hover img:first-child {
+        transform: scale(1.03);
     }
