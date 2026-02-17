@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Navbar */
+.top-nav {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background: #0f0f0f;
+}
+
+/* Left side */
+.lhs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.logo img {
+    height: 20px;
+    display: block;
+    fill: white;
+}
+
+/* Generic icon button */
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icon-btn img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: invert(1);
+}
+
+/* Center search area */
+.search-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #303030;
+    background: #121212;
+    color: #fff;
+    outline: none;
+    border-radius: 999px 0 0 999px;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.search-bar button.search-icon {
+    height: 40px;
+    width: 64px;
+    border: 1px solid #303030;
+    border-left: none;
+    background: #222;
+    border-radius: 0 999px 999px 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.search-bar button.search-icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+/* Mic button */
+.mic {
+    background: #181818;
+}
+
+.mic .material-icons {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* Right side */
+.rhs {
+    display: flex;
+    /* this is why your gap wasn't working */
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+    justify-content: flex-end;
+}
+
+/* Create pill */
+.create {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid #303030;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.create:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Profile */
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
