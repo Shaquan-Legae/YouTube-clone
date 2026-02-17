@@ -5,8 +5,8 @@
 }
 
 body {
-    background: #0f0f0f;
-    color: #fff;
+    background: #ffffff;
+    color: #0f0f0f;
     font-family: Arial, sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    background: #0f0f0f;
+    background: #ffffff;
 }
 
 /* Left side */
@@ -31,7 +31,6 @@ body {
 .logo img {
     height: 20px;
     display: block;
-    fill: white;
 }
 
 /* Generic icon button */
@@ -47,14 +46,14 @@ body {
 }
 
 .icon-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .icon-btn img {
     width: 22px;
     height: 22px;
     display: block;
-    filter: invert(1);
+    filter: none;
 }
 
 /* Center search area */
@@ -78,23 +77,23 @@ body {
     flex: 1;
     height: 40px;
     padding: 0 16px;
-    border: 1px solid #303030;
-    background: #121212;
-    color: #fff;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #0f0f0f;
     outline: none;
     border-radius: 999px 0 0 999px;
 }
 
 .search-bar input::placeholder {
-    color: #aaa;
+    color: #666;
 }
 
 .search-bar button.search-icon {
     height: 40px;
     width: 64px;
-    border: 1px solid #303030;
+    border: 1px solid #cccccc;
     border-left: none;
-    background: #222;
+    background: #f2f2f2;
     border-radius: 0 999px 999px 0;
     cursor: pointer;
     display: grid;
@@ -104,23 +103,22 @@ body {
 .search-bar button.search-icon img {
     width: 20px;
     height: 20px;
-    filter: invert(1);
+    filter: none;
 }
 
 /* Mic button */
 .mic {
-    background: #181818;
+    background: #f2f2f2;
 }
 
 .mic .material-icons {
     font-size: 22px;
-    color: #fff;
+    color: #0f0f0f;
 }
 
 /* Right side */
 .rhs {
     display: flex;
-    /* this is why your gap wasn't working */
     align-items: center;
     gap: 12px;
     min-width: 220px;
@@ -132,15 +130,15 @@ body {
     height: 36px;
     padding: 0 14px;
     border-radius: 999px;
-    border: 1px solid #303030;
+    border: 1px solid #cccccc;
     background: transparent;
-    color: #fff;
+    color: #0f0f0f;
     cursor: pointer;
     font-weight: 600;
 }
 
 .create:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.08);
 }
 
 /* Profile */
@@ -149,4 +147,11 @@ body {
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.profile-image:hover {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 5px 5px;
+    cursor: pointer;
 }
