@@ -124,15 +124,22 @@
         justify-content: flex-end;
     }
 
+    .plus {
+        height: 15px;
+    }
+
     .create {
+        display: inline-flex;
         height: 36px;
-        padding: 0 14px;
+        gap: 5px;
+        padding: 10px 14px;
         border-radius: 999px;
         border: 1px solid #cccccc;
         background: transparent;
         color: #0f0f0f;
         cursor: pointer;
         font-weight: 600;
+        width: 90px;
     }
 
     .create:hover {
@@ -222,6 +229,17 @@
         background: transparent;
         border: none;
         border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .morefromYT h4 {
+        padding: 5px 0;
+        font-weight: 550;
+    }
+
+    .explore button, .you button {
+        padding-left: 15px;
+        font-size: 14px;
     }
 
     /*Left Pane Nav Footer*/
