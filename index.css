@@ -220,6 +220,7 @@ body {
     width: 280px;
     height: calc(100vh - 56px);
     overflow-y: auto;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .left-nav a.icon-btn {
@@ -234,6 +235,7 @@ body {
     text-decoration: none;
     color: inherit;
     background: transparent;
+    transition: justify-content 0.3s cubic-bezier(0.4, 0, 0.2, 1), gap 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .left-nav a.icon-btn img,
@@ -262,7 +264,15 @@ body {
 }
 
 .left-nav::-webkit-scrollbar {
-    width: 20px;
+    width: 0;
+}
+
+.left-nav::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.left-nav::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .left-nav button {
@@ -291,6 +301,20 @@ body {
     font-size: 14px;
 }
 
+.subcriptions,
+.subscriptions>button {
+    justify-content: space-between;
+    padding-right: 12px;
+    color: inherit;
+    opacity: 1;
+}
+
+.subcriptions .sidedrop,
+.subscriptions>button .sidedrop {
+    flex-shrink: 0;
+    opacity: 1;
+}
+
 .nav-footer a {
     text-decoration: none;
     color: rgba(8, 6, 6, 0.719);
@@ -311,11 +335,18 @@ body {
     gap: 12px;
     padding: 12px 16px;
     overflow-x: auto;
-    white-space: nowrap;
+    overflow-y: hidden;
     position: sticky;
     top: 56px;
-    background: white;
-    z-index: 5;
+    z-index: 4;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-padding: 16px;
+    
+}
+
+.suggestions button {
+    scroll-snap-align: start;
 }
 
 .suggestions button {
@@ -326,6 +357,9 @@ body {
     border-radius: 9px;
     cursor: pointer;
     transition-duration: 0.4s;
+    flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .suggestions button:hover {
@@ -382,11 +416,13 @@ body {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
 .video-card:hover .thumb-wrap img {
     transform: scale(1.03);
+    transform-origin: center center;
 }
 
 .duration {
@@ -409,12 +445,14 @@ body {
     flex-direction: column;
     gap: 6px;
     opacity: 0;
-    transition: opacity 0.15s ease;
+    transform: translateY(-5px);
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 }
 
 .video-card:hover .hover-actions {
     opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
 }
 
@@ -495,6 +533,7 @@ body {
 #side:checked~.left-nav {
     width: 88px;
     padding-left: 10px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #side:checked~.left-nav a.icon-btn {
@@ -512,10 +551,20 @@ body {
 
 #side:checked~.suggestions {
     margin-left: 98px;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #side:checked~.content.video-grid {
     margin-left: 98px;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.suggestions {
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content.video-grid {
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #theme:checked~main,
@@ -535,6 +584,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+#theme:checked~section.navbar .search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 #theme:checked~section.navbar .search-bar button.search-icon {
     background: #1f1f1f;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -544,10 +597,13 @@ body {
 #theme:checked~main .suggestions button {
     background: #272727;
     color: #f1f1f1;
+    opacity: 1;
+    visibility: visible;
 }
 
 #theme:checked~main .suggestions button:hover {
     background: #3d3d3d;
+    opacity: 1;
 }
 
 #theme:checked~main .channel,
@@ -569,16 +625,152 @@ body {
     background: rgba(255, 255, 255, 0.12);
 }
 
-#theme:checked~section.navbar .mic .material-icons,
+#theme:checked~section.navbar .mic .material-icons {
+    color: #f1f1f1;
+}
+
+/* Style theme-toggle button */
+.theme-toggle {
+    transition: background 0.2s ease;
+}
+
+.theme-toggle .material-icons {
+    color: #0f0f0f;
+    transition: color 0.2s ease;
+}
+
 #theme:checked~section.navbar .theme-toggle .material-icons {
     color: #f1f1f1;
 }
 
-#theme:checked~section.navbar .icon-btn img,
-#theme:checked~main .left-nav a.icon-btn img,
-#theme:checked~main .subscriptions img {
+#theme:checked~section.navbar .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#theme:checked~section.navbar .icon-btn img {
     filter: invert(1);
 }
+
+/* Make left-nav icon-btn icons white in dark mode */
+#theme:checked~main .left-nav a.icon-btn img {
+    filter: invert(1);
+}
+
+/* Exclude profile images from inversion in subscriptions - only invert icons, not profile photos */
+#theme:checked~main .subscriptions a.icon-btn img[src*="profile.jpg"],
+#theme:checked~main .left-nav a.icon-btn.subscriptions img[src*="profile.jpg"] {
+    filter: none !important;
+}
+
+/* Make sidedrop and dropdown icons white in dark mode */
+#theme:checked~main .left-nav .sidedrop,
+#theme:checked~main .left-nav .dropdown {
+    filter: invert(1);
+}
+
+/* Don't invert profile images (they're photos, not icons) */
+#theme:checked~main .left-nav img[src*="profile.jpg"],
+#theme:checked~main .avatar[src*="profile.jpg"],
+#theme:checked~section.navbar .profile-image[src*="profile.jpg"] {
+    filter: none;
+}
+
+/* YouTube logo: keep play button red, make text white */
+/* Note: Since logo is a single SVG, we use a filter that inverts colors */
+/* The red play button will become cyan, so we rotate hue to get red back */
+#theme:checked~section.navbar .logo img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Extra dark theme tweaks so components use dark backgrounds and light text */
+#theme:checked~main .content.video-grid {
+    background: #0f0f0f;
+}
+
+#theme:checked~main .video-card {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .thumb-wrap {
+    background: #181818;
+}
+
+#theme:checked~main .title {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .kebab .material-icons {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .left-nav a.icon-btn:hover,
+#theme:checked~main .left-nav button:hover,
+#theme:checked~main .kebab:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Make all left-nav text white in dark mode */
+#theme:checked~main .left-nav a.icon-btn {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .left-nav button {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .left-nav h4 {
+    color: #f1f1f1;
+}
+
+#theme:checked~main .left-nav .nav-footer p {
+    color: #aaaaaa;
+}
+
+/* Update left-nav divider borders for dark mode */
+#theme:checked~main .left-nav>div+div {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#theme:checked~section.navbar .icon-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Topbar elements - ensure search icon and other icons are white */
+#theme:checked~section.navbar .search-bar button.search-icon img {
+    filter: invert(1);
+}
+
+/* Content area - ensure all text elements are white */
+#theme:checked~main .content {
+    color: #f1f1f1;
+}
+
+#theme:checked~section.navbar .mic {
+    background: #272727;
+}
+
+#theme:checked~section.navbar .mic:hover {
+    background: #3d3d3d;
+}
+
+#theme:checked~section.navbar .create {
+    background: #272727;
+    color: #f1f1f1;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#theme:checked~section.navbar .create:hover {
+    background: #3d3d3d;
+}
+
+#theme:checked~section.navbar .create .plus {
+    filter: invert(1);
+}
+
+#theme:checked~main .suggest-item .material-icons {
+    color: #f1f1f1;
+}
+
 
 @media (max-width: 900px) {
     .left-nav {
