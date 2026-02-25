@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.youtube.com/s/desktop/d087c7c0/css/desktop.css">
-    <link rel="stylesheet" href="https://www.youtube.com/s/desktop/d087c7c0/css/desktop-mobile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link href="index.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/d087c7c0/img/favicon.ico" type="image/x-icon">
     <title>YouTube</title>
 </head>
 
 <body>
+    <input type="checkbox" id="theme" class="theme-check">
     <section class="navbar">
         <nav class="top-nav">
             <div class="lhs">
-                <a href="#" class="icon-btn hamburger-menu" aria-label="Menu">
+                <label for="side" class="icon-btn hamburger-menu" aria-label="Menu">
                     <img src="/resources/hbm.svg" alt="Hamburger Menu">
-                </a>
+                </label>
 
                 <a href="#" class="logo" aria-label="YouTube">
                     <img src="/resources/yt.svg" alt="YouTube">
@@ -27,11 +25,24 @@
             </div>
 
             <div class="search-wrap">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search" />
-                    <button class="search-icon" aria-label="Search">
-                        <img src="/resources/search.svg" alt="">
-                    </button>
+                <div class="search-box">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search" />
+                        <button class="search-icon" aria-label="Search">
+                            <img src="/resources/search.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="search-suggestions">
+                        <a href="#" class="suggest-item"><span class="material-icons">search</span> john terry 20
+                            fans</a>
+                        <a href="#" class="suggest-item"><span class="material-icons">search</span> l$30 cocoa
+                            butter</a>
+                        <a href="#" class="suggest-item"><span class="material-icons">search</span> gothamchess</a>
+                        <a href="#" class="suggest-item"><span class="material-icons">search</span> afro house mix</a>
+                        <a href="#" class="suggest-item"><span class="material-icons">search</span> youtube clone html
+                            css</a>
+                    </div>
                 </div>
 
                 <button class="icon-btn mic" aria-label="Voice search">
@@ -42,6 +53,10 @@
             <div class="rhs">
                 <button class="create"><img src="/resources/plus.svg" alt="Create" class="plus"> Create</button>
 
+                <label for="theme" class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <span class="material-icons">dark_mode</span>
+                </label>
+
                 <a href="#" class="icon-btn notifications" aria-label="Notifications">
                     <img src="/resources/bell.svg" alt="">
                 </a>
@@ -50,7 +65,10 @@
             </div>
         </nav>
     </section>
+
     <main>
+        <input type="checkbox" id="side" class="side-check">
+
         <aside class="left-nav">
             <div class="shorts-home">
                 <a href="#" class="icon-btn home" aria-label="Home"><img src="/resources/home.svg" alt="Home"> Home </a>
@@ -118,16 +136,16 @@
                     <a href="#">Creator</a>
                     <a href="#">Advertise</a>
                     <a href="#">Developers</a>
-                <ul>
-                <br>
-                <ul>
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Policy & Safety</a>
-                    <a href="#">How YouTube Works</a>
-                    <a href="#">Test new features</a>
-                </ul>
-                <p>© 2026 Google LLC.</p>
+                    <ul>
+                        <br>
+                        <ul>
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
+                            <a href="#">Policy & Safety</a>
+                            <a href="#">How YouTube Works</a>
+                            <a href="#">Test new features</a>
+                        </ul>
+                        <p>© 2026 Google LLC.</p>
             </div>
         </aside>
 
@@ -161,7 +179,8 @@
 
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -172,61 +191,7 @@
                         </button>
                     </span>
                 </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">John Terry V 20 Football Fans</h3>
-                        <p class="channel">Zac Djellab</p>
-                        <p class="stats">433K views • 2 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA" alt="Let Me Be Your Mentor">
-                    <span class="duration">2:44</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">Let Me Be Your Mentor</h3>
-                        <p class="channel">L$30 - Topic</p>
-                        <p class="stats">10K views • 6 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
-                    <span class="duration">47:54</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -242,34 +207,8 @@
 
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
-                    <span class="duration">47:54</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">John Terry V 20 Football Fans</h3>
-                        <p class="channel">Zac Djellab</p>
-                        <p class="stats">433K views • 2 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA" alt="Let Me Be Your Mentor">
+                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA"
+                        alt="Let Me Be Your Mentor">
                     <span class="duration">2:44</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -280,7 +219,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -293,10 +232,11 @@
                     </button>
                 </div>
             </article>
-        
+
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -307,7 +247,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -323,7 +263,8 @@
 
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -334,61 +275,7 @@
                         </button>
                     </span>
                 </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">John Terry V 20 Football Fans</h3>
-                        <p class="channel">Zac Djellab</p>
-                        <p class="stats">433K views • 2 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA" alt="Let Me Be Your Mentor">
-                    <span class="duration">2:44</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">Let Me Be Your Mentor</h3>
-                        <p class="channel">L$30 - Topic</p>
-                        <p class="stats">10K views • 6 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
-                    <span class="duration">47:54</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -404,34 +291,8 @@
 
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
-                    <span class="duration">47:54</span>
-                    <span class="hover-actions">
-                        <button class="hover-btn" type="button" aria-label="Watch later">
-                            <span class="material-icons">schedule</span>
-                        </button>
-                        <button class="hover-btn" type="button" aria-label="Add to queue">
-                            <span class="material-icons">playlist_play</span>
-                        </button>
-                    </span>
-                </a>
-        
-                <div class="meta">
-                    <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
-                    <div class="meta-text">
-                        <h3 class="title">John Terry V 20 Football Fans</h3>
-                        <p class="channel">Zac Djellab</p>
-                        <p class="stats">433K views • 2 days ago</p>
-                    </div>
-                    <button class="kebab" type="button" aria-label="More options">
-                        <span class="material-icons">more_vert</span>
-                    </button>
-                </div>
-            </article>
-        
-            <article class="video-card">
-                <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA" alt="Let Me Be Your Mentor">
+                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA"
+                        alt="Let Me Be Your Mentor">
                     <span class="duration">2:44</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -442,7 +303,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -455,10 +316,11 @@
                     </button>
                 </div>
             </article>
-        
+
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -469,7 +331,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -485,7 +347,8 @@
 
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -496,7 +359,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -509,10 +372,11 @@
                     </button>
                 </div>
             </article>
-        
+
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA" alt="Let Me Be Your Mentor">
+                    <img src="https://i.ytimg.com/vi/NGpMi3hzZIc/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFtHnlnpI1clFOZXgQVOKGbZEgxA"
+                        alt="Let Me Be Your Mentor">
                     <span class="duration">2:44</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -523,7 +387,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -536,10 +400,11 @@
                     </button>
                 </div>
             </article>
-        
+
             <article class="video-card">
                 <a class="thumb-wrap" href="#">
-                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg" alt="John Terry v 20 Football Fans">
+                    <img src="https://i.ytimg.com/vi/i50mCb4UGAw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB16BJO0SyUy4fCung3oKMWX-9Jeg"
+                        alt="John Terry v 20 Football Fans">
                     <span class="duration">47:54</span>
                     <span class="hover-actions">
                         <button class="hover-btn" type="button" aria-label="Watch later">
@@ -550,7 +415,7 @@
                         </button>
                     </span>
                 </a>
-        
+
                 <div class="meta">
                     <img class="avatar" src="/resources/profile.svg" alt="Channel avatar">
                     <div class="meta-text">
@@ -563,7 +428,7 @@
                     </button>
                 </div>
             </article>
-        
+
         </div>
     </main>
 </body>
