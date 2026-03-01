@@ -60,6 +60,10 @@
                     <span class="material-icons">dark_mode</span>
                 </label>
 
+                <button class="icon-btn mobile-search" aria-label="Search">
+                    <img src="/resources/search.svg" alt="">
+                </button>
+
                 <a href="#" class="icon-btn notifications" aria-label="Notifications">
                     <img src="/resources/bell.svg" alt="">
                 </a>
@@ -154,6 +158,18 @@
                         <p>© 2026 Google LLC.</p>
             </div>
         </aside>
+
+        <label for="side" class="mobile-nav-backdrop" aria-hidden="true"></label>
+
+        <div class="mobile-search-row" aria-label="Mobile search">
+            <div class="mobile-search-box">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Search">
+            </div>
+            <button class="icon-btn mobile-mic" aria-label="Voice search">
+                <span class="material-icons">mic</span>
+            </button>
+        </div>
 
         <span class="suggestions">
             <button class="suggestion-btn">All</button>
@@ -688,6 +704,29 @@
             </article>
 
         </div>
+
+        <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+            <a href="#" class="mobile-bottom-link is-active" aria-label="Home">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </a>
+            <a href="#" class="mobile-bottom-link" aria-label="Shorts">
+                <span class="material-icons">play_circle_outline</span>
+                <span>Shorts</span>
+            </a>
+            <a href="#" class="mobile-bottom-link" aria-label="Create">
+                <span class="material-icons">add_circle_outline</span>
+                <span>Create</span>
+            </a>
+            <a href="#" class="mobile-bottom-link" aria-label="Subscriptions">
+                <span class="material-icons">subscriptions</span>
+                <span>Subscriptions</span>
+            </a>
+            <a href="#" class="mobile-bottom-link" aria-label="You">
+                <span class="material-icons">person_outline</span>
+                <span>You</span>
+            </a>
+        </nav>
     </main>
 </body>
 
